@@ -1,0 +1,1 @@
+1.1~https://bitbucket.org/SilicaAndPina/gaymaker-studio/downloads/GayMaker-Studio%201.1.zip
