@@ -55,6 +55,8 @@ namespace GayMaker_Studio
         private void VersionManager_Load(object sender, EventArgs e)
         {
             this.Owner = Program.GMS;
+            Directory.CreateDirectory(@"versions");
+
             for (int cdnIndex = 1; cdnIndex <= NUMBER_OF_CDN_URLS; cdnIndex++)
             {
                 Thread downloadThread = new Thread(() =>

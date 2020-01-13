@@ -16,7 +16,7 @@ namespace GMTools
     {
         //GMS14
         public const String GMS14 = "http://store.yoyogames.com/downloads/gm-studio/update-studio.rss";
-        public const String GMS14EA = "http://store.yoyogames.com/downloads/gm-studio-ea/update-studio-ea.rss";
+        public const String GMS14EA = "https://pastebin.com/raw/XN4gPX4u";
 
         //GMS2
         public const String GMS2 = "http://gms.yoyogames.com/Zeus-Runtime.rss";

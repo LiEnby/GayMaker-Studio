@@ -17,7 +17,7 @@ namespace GayMaker_Studio
 {
     public partial class GayMakerStudio : Form
     {
-        public String CurrentVerison = "1.1";
+        public String CurrentVerison = "1.2";
         bool HasShaders = false;
 
         public GayMakerStudio()
@@ -133,7 +133,7 @@ namespace GayMaker_Studio
             WebClient wc = new WebClient();
 
             wc.CachePolicy = new RequestCachePolicy(RequestCacheLevel.NoCacheNoStore);
-            String UpdateString = wc.DownloadString("https://bitbucket.org/SilicaAndPina/gaymaker-studio/raw/master/latest.md");
+            String UpdateString = wc.DownloadString("https://raw.githubusercontent.com/KuromeSan/GayMaker-Studio/master/latest.md");
             String[] Data = UpdateString.Split('~');
             if (Data[0] != CurrentVerison)
             {
@@ -395,12 +395,14 @@ namespace GayMaker_Studio
 
 
             String TexturePageSize = "1028";
+            String SHEnabled = "False";
 
             if (GMVer.StartsWith("1."))
             {
                 XmlDocument DefaultConfig = new XmlDocument();
                 DefaultConfig.Load(Path.GetDirectoryName(projectPath.Text) + "\\Configs\\Default.config.gmx");
                 TexturePageSize = DefaultConfig.GetElementsByTagName("option_ps4_texture_page")[0].InnerText;
+                SHEnabled = DefaultConfig.GetElementsByTagName("option_shortcircuit")[0].InnerText;
             }
 
 
@@ -423,11 +425,11 @@ namespace GayMaker_Studio
             string args;
             if (HasShaders && GMVer.StartsWith("1."))
             {
-                args = "/c /m=ps4 /config=\"Default\" /tgt=4294967296 /obob=True /obpp=False /obru=True /obes=False /i=3 /j=4 /cvm /tp=" + TexturePageSize + " /mv=1 /iv=0 /rv=0 /bv=" + versionBit + " /sh=False /ps4sdk=\"" + Directory.GetCurrentDirectory() + "\\ps4sdk\" /gn=\"" + titleName.Text + "\" /o=\"" + Dst + "\" \"" + Src + "\"";
+                args = "/c /m=ps4 /config=\"Default\" /tgt=4294967296 /obob=True /obpp=False /obru=True /obes=False /i=3 /j=4 /cvm /tp=" + TexturePageSize + " /mv=1 /iv=0 /rv=0 /bv=" + versionBit + " /sh="+ SHEnabled+" / ps4sdk=\"" + Directory.GetCurrentDirectory() + "\\ps4sdk\" /gn=\"" + titleName.Text + "\" /o=\"" + Dst + "\" \"" + Src + "\"";
             }
             else if(GMVer.StartsWith("1."))
             {
-                args = "/c /m=ps4 /config=\"Default\" /tgt=4294967296 /obob=True /obpp=False /obru=True /obes=False /i=3 /j=4 /cvm /tp=" + TexturePageSize + " /mv=1 /iv=0 /rv=0 /bv=" + versionBit + " /sh=False /gn=\"" + titleName.Text + "\" /o=\"" + Dst + "\" \"" + Src + "\"";
+                args = "/c /m=ps4 /config=\"Default\" /tgt=4294967296 /obob=True /obpp=False /obru=True /obes=False /i=3 /j=4 /cvm /tp=" + TexturePageSize + " /mv=1 /iv=0 /rv=0 /bv=" + versionBit + " /sh=" + SHEnabled + " /gn=\"" + titleName.Text + "\" /o=\"" + Dst + "\" \"" + Src + "\"";
             }
             else if(HasShaders && GMVer.StartsWith("2."))
             {
