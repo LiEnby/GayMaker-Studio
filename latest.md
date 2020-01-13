@@ -1,1 +1,1 @@
-1.1~https://bitbucket.org/SilicaAndPina/gaymaker-studio/downloads/GayMaker-Studio%201.1.zip
+1.2~https://github.com/KuromeSan/GayMaker-Studio/releases/download/v1.2/GayMaker-Studio.1.2.zip
