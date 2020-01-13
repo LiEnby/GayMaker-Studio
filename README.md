@@ -1,4 +1,4 @@
-# 1.2 
+# v1.2 
 Short Circuit Evaulations setting is now applied correctly
 Fixed auto updater
 Fixed version manager
