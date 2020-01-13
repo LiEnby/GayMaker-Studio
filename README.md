@@ -1,3 +1,10 @@
+# 1.2 
+Short Circuit Evaulations setting is now applied correctly
+Fixed auto updater
+Fixed version manager
+
+Download: https://github.com/KuromeSan/GayMaker-Studio/releases/download/v1.2/GayMaker-Studio.1.2.zip 
+
 # v1.1    
 Added version manager - now you can use any verison of GMS1.4 you want    
 Updated default version to 1.4.9999   
