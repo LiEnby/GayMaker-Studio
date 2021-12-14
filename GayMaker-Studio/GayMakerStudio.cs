@@ -17,7 +17,7 @@ namespace GayMaker_Studio
 {
     public partial class GayMakerStudio : Form
     {
-        public String CurrentVerison = "1.2";
+        public String CurrentVerison = "1.2.1";
         bool HasShaders = false;
 
         public GayMakerStudio()
@@ -425,7 +425,7 @@ namespace GayMaker_Studio
             string args;
             if (HasShaders && GMVer.StartsWith("1."))
             {
-                args = "/c /m=ps4 /config=\"Default\" /tgt=4294967296 /obob=True /obpp=False /obru=True /obes=False /i=3 /j=4 /cvm /tp=" + TexturePageSize + " /mv=1 /iv=0 /rv=0 /bv=" + versionBit + " /sh="+ SHEnabled+" / ps4sdk=\"" + Directory.GetCurrentDirectory() + "\\ps4sdk\" /gn=\"" + titleName.Text + "\" /o=\"" + Dst + "\" \"" + Src + "\"";
+                args = "/c /m=ps4 /config=\"Default\" /tgt=4294967296 /obob=True /obpp=False /obru=True /obes=False /i=3 /j=4 /cvm /tp=" + TexturePageSize + " /mv=1 /iv=0 /rv=0 /bv=" + versionBit + " /sh="+ SHEnabled+" /ps4sdk=\"" + Directory.GetCurrentDirectory() + "\\ps4sdk\" /gn=\"" + titleName.Text + "\" /o=\"" + Dst + "\" \"" + Src + "\"";
             }
             else if(GMVer.StartsWith("1."))
             {
