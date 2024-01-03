@@ -33,7 +33,7 @@ All projects are compiled using GameMaker 1.4.1804 - the latest version that wor
 Packages are created using LibOrbisPkg, No changes made to the original source of the Libary.  
 However some snippits where taken from the PkgEditor and changed to not read from clipboard / drag n drop  
 
-Please show me any games you make with it! (though, please note i wont be too interested unless a girl dies)
+Please show me any games you make with it!
 
 #Shaders
 When you compile a project that uses Shaders for the first time. you'll be prompted to browse to 'orbis-wave-psslc.exe'
